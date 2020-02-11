@@ -33,7 +33,17 @@ Publish an interactive dashboard for FEMA that will provide,
 •	distribution of  ‘flood risk ’  in a given area
 
 •	‘vulnerability index’ in a given area
- ### Approach
+
+
+## Strech Goal (ideas)
+  * publish a API that will combine the  business category to mapping for any future project.
+  
+  * provide API that can be used by Yelp or FEMA to provide to business owner
+    ** to be official partner of FEMA to earn one or more badges.
+    ** update status of the business , (during disastor) which can be used by first responsders, FEMA to assess the situation
+    <Please add here>
+ 
+  ##. MVP high level Approach
      ###### Data collection  :
      1. Business data - Yelp/ Google places
      2. Flood risk data - TBD
@@ -42,12 +52,5 @@ Publish an interactive dashboard for FEMA that will provide,
       ###### Data wrangling  :
       1. Categorize business in to the FEMA life lines (to create a new column.)
       2. Model  risk as  "High" , "Medium" , "low" - for a given community.
- 
-
-## Strech Goal (ideas)
-  > publish a API that will combine the  business category to mapping for any future project.
+    
   
-  >provide API that can be used by Yelp or FEMA to provide to business owner
-    >> to be official partner of FEMA to earn one or more badges.
-    >> update status of the business , (during disastor) which can be used by. 
-    >> to be official partner of FEMA to earn one or more badges.first responsders, FEMA , community to assess situation
