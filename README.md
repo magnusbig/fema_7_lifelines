@@ -29,6 +29,7 @@ Publish an interactive dashboard for FEMA that will provide,
 •	distribution of ‘community life lines’ in a given area.
  We will accomplish this by collecting data about all the businesses in a given area and categorizing them in to one of the life lines and dashboarding it.      
 •	distribution of  ‘flood risk ’  in a given area
+
 •	‘vulnerability index’ in a given area
  ### Approach
      ###### Data collection  :
