@@ -44,7 +44,9 @@ Publish an interactive dashboard for FEMA that will provide,
     <Please add here>
  
   ##. MVP high level Approach
+  
      ###### Data collection  :
+     
      1. Business data - Yelp/ Google places
      2. Flood risk data - TBD
      3. Social Vulnerability Index -  https://svi.cdc.gov/Documents/Data/2016_SVI_Data/SVI2016Documentation.pdf
