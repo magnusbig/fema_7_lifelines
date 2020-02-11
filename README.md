@@ -3,7 +3,7 @@
 Disaster could destroy your community’s infrastructure and damage homes and severely hurt the economy. Prior to and During disaster it is important to understand the projected and actual effect of the event on the community, including its effect on critical services a community needs to function.
 
 FEMA (Federal emergency Management Agency) broadly categories these services under one of the seven “community lifelines”. Lifelines are the most fundamental services in the community that, when stabilized, enable all other aspects of society to function.
-<screen shot>
+![]("./images/lifelines.png")
 
 The integrated network of assets, services, and capabilities that provide lifeline services are used day-to-day to support the recurring needs of the community and enable all other aspects of society to function.When disrupted, decisive intervention (e.g., rapid re-establishment or employment of contingency response solutions) is required to stabilize the incident.
 
