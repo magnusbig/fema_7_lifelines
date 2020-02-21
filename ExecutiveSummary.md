@@ -74,7 +74,11 @@ Publish an interactive dashboard for FEMA that will provide,
   
   
   
-  ## Visualization
+  ## Comprehensive Risk Dashboard
+  
+  Following interactive dashboard built in Tableau to visualize the individual components of equation which was used as heuristic to calculate the 'comprehensive risk' score, The bottom dashboard gives a visual indication of risk associated with
+different census tracts for the Denver region. The score ranges from 0-10 with with 0 being the lowest risk to 10 being the hiest risk.
+
   <img src="https://github.com/magnusbig/fema_7_lifelines/blob/master/images/comprehensive_risk.png" style="width: 500px">
   
   
