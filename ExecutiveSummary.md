@@ -69,7 +69,7 @@ Publish an interactive dashboard for FEMA that will provide,
    <img src="https://github.com/magnusbig/fema_7_lifelines/blob/master/images/lifelines_frequency_distribution.png" style="width: 500px">
  
  ###### Life line  distribution by geography
-  <img src="https://github.com/magnusbig/fema_7_lifelines/blob/master/images/lifelines.png" style="width: 500px">
+  <img src="https://github.com/magnusbig/fema_7_lifelines/blob/master/images/lifeline_geographic_distribution.png" style="width: 500px">
   ## Modelling 
   
   
