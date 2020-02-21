@@ -59,7 +59,10 @@ Publish an interactive dashboard for FEMA that will provide,
      
   ## Data collection and cleaning
   
-  Data Definition: 
+  Gather data from ....
+  
+  
+  Output File Data Definition: 
 
   |Variable Name|Type|Decription|
 |---|---|---|
