@@ -6,7 +6,7 @@
 - John Wertz
 - Scott Rosengrants
 
-Analysis of flooding risk and comprehensive riskof Census tracts in the Denver metro area based on FEMA's 7 Lifelines.
+Analysis of flooding risk and comprehensive risk of Census tracts in the Denver metro area based on FEMA's 7 Lifelines.
 
 ### Problem Statements/ Objectives: 
 
