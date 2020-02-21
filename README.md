@@ -56,6 +56,23 @@ Publish an interactive dashboard for FEMA that will provide,
       2. Model  risk as  "High" , "Medium" , "low" - for a given community.
       3. Build dashboard to display distribution of  3 peices of information (risk of flooding , SVI , lifeline).
       
-      
+     
+  ##. Data collection and cleaning
+  
+  
+  
+  
+  ## Modelling 
+  
+  
+  
+  ## Visualization
+  
+  
+  
+  ## Further Improvement Section
+  
+  
+  
     
   
