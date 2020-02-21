@@ -85,7 +85,7 @@ Publish an interactive dashboard for FEMA that will provide,
   
   
   ## Visualization
-  
+  <img src="https://github.com/magnusbig/fema_7_lifelines/blob/master/images/comprehensive_risk.png" style="width: 500px">
   
   
   ## Further Improvement Section
