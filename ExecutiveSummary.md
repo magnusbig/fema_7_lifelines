@@ -1,6 +1,6 @@
-# Utilizing Yelp data to estimate the number of businesses in a given locality and categorizing them according to FEMA's seven lifelines
+# Utilizing the number of businesses data in a given locality and categorizing them according to FEMA's seven lifelines
 ## Summary:
-Disaster could destroy your community’s infrastructure and damage homes and severely hurt the economy. Prior to and During disaster it is important to understand the projected and actual effect of the event on the community, including its effect on critical services a community needs to function.
+Disaster could destroy your community’s infrastructure and damage homes and severely hurt the economy. Prior to and during the disaster it is important to understand the projected and actual effect of the event on the community, including its effect on critical services a community needs to function.
 
 FEMA (Federal emergency Management Agency) broadly categories these services under one of the seven “community lifelines”. Lifelines are the most fundamental services in the community that, when stabilized, enable all other aspects of society to function.
 
@@ -26,13 +26,10 @@ Business owners can officially partner with FEMA and earn a lifeline badge they 
 
 ## MVP Goal:
 
-Publish an interactive dashboard for FEMA that will provide, 
+1. Find and categorize FEMA lifelines in Denver 
+2. Calculate flood risk for census tracts around Denver, using a   
+Risk  =  Hazard  x  (Vulnerability  -  Resources)
 
-•	distribution of ‘community life lines’ in a given area.
- We will accomplish this by collecting data about all the businesses in a given area and categorizing them in to one of the life lines and dashboarding it.      
-•	distribution of  ‘flood risk ’  in a given area
-
-•	‘vulnerability index’ in a given area
 
 
 ## Strech Goal (ideas)
