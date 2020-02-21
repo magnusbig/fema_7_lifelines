@@ -32,7 +32,7 @@ Risk  =  Hazard  x  (Vulnerability  -  Resources)
 
 
 
-## Strech Goal (ideas)
+## Stretch Goal (ideas)
   * publish a API that will combine the  business category to mapping for any future project.
   
   * provide API that can be used by Yelp or FEMA to provide to business owner
@@ -78,6 +78,13 @@ In order to properly get a resource score to calculate the comprehensive risk sc
 Census tracts were considered for this but ultimately deemed to be too irregular in size and shape and many of the smaller tracts did not contain very many FEMA lifelines. Instead zones were created to cluster lifelines together based on proximity. With this approach, both a large sample of lifelines and population could be analyzed. <br>
 
 Hospitals served as the center of these zones. They were selected because of their importance to a community and the limited amount of them for a given geographic region. Once the hospitals were identified they then were clustered. DBSCAN, an unsupervised learning model, was utilized to identify clusters of hospitals from one based on proximity of one another. Once these clusters were identified the average geographic coordinate was found among the cluster by averaging the latitude and longitude values of each hospital in each cluster. From this new center point a circular zone was created with a radius of approximately 6.9 miles or 14 miles in diameter. <br>
+
+<img src="https://github.com/magnusbig/fema_7_lifelines/blob/master/images/zones_hospitals.png" style="width: 100px">
+<img src="https://github.com/magnusbig/fema_7_lifelines/blob/master/images/zones_dbscan.png" style="width: 100px">
+<img src="https://github.com/magnusbig/fema_7_lifelines/blob/master/images/zone_centers.png" style="width: 100px">
+<img src="https://github.com/magnusbig/fema_7_lifelines/blob/master/images/zones_lifelines.png" style="width: 100px">
+
+
 
 Once the zones had been defined the lifelines within them were counted and the population of the census tracts that fell within the zone were totaled. From here a zone resource score could be calculated. A weighted score was applied: <br>
 
