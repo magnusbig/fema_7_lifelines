@@ -77,10 +77,11 @@ Publish an interactive dashboard for FEMA that will provide,
 |lifeline_number|	Int|	Number assignment for lifeline (1-7)|
 |lifeline_category|	object|	Description of lifeline|
 
-  ##EDA 
+  ## EDA 
   ######  Community Life line frequency distribution and Elevations
    <img src="https://github.com/magnusbig/fema_7_lifelines/blob/master/images/lifelines_frequency_distribution.png" style="width: 500px">
  
+ ###### Life line  distribution by geography
   
   ## Modelling 
   
