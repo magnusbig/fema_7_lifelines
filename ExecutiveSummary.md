@@ -70,8 +70,49 @@ The clean data was then saved for the next phase.
  
  ###### Life line  distribution by geography
   <img src="https://github.com/magnusbig/fema_7_lifelines/blob/master/images/lifeline_geographic_distribution.png" style="width: 500px">
-  ## Modelling 
+## Modelling 
   
+### Create Zones
+In order to properly get a resource score to calculate the comprehensive risk score an area needed to be determined to get the proper count of lifelines and population. <br>
+
+Census tracts were considered for this but ultimately deemed to be too irregular in size and shape and many of the smaller tracts did not contain very many FEMA lifelines. Instead zones were created to cluster lifelines together based on proximity. With this approach, both a large sample of lifelines and population could be analyzed. <br>
+
+Hospitals served as the center of these zones. They were selected because of their importance to a community and the limited amount of them for a given geographic region. Once the hospitals were identified they then were clustered. DBSCAN, an unsupervised learning model, was utilized to identify clusters of hospitals from one based on proximity of one another. Once these clusters were identified the average geographic coordinate was found among the cluster by averaging the latitude and longitude values of each hospital in each cluster. From this new center point a circular zone was created with a radius of approximately 6.9 miles or 14 miles in diameter. <br>
+
+Once the zones had been defined the lifelines within them were counted and the population of the census tracts that fell within the zone were totaled. From here a zone resource score could be calculated. A weighted score was applied: <br>
+
+
+| Weight | Lifeline             |
+|--------|----------------------|
+| 0.2    | Safety & Security    |
+| 0.2    | Food, Water, Shelter |
+| 0.3    | Health & Medical     |
+| 0.1    | Energy               |
+| 0.1    | Communication        |
+| 0.1    | Transportation       |
+| N/A    | Hazardous Materials  |
+
+
+**Zone Lifeline Score** = Total Count of Resource * Lifeline Weight
+
+**Zone Weighted Resource Score** = Total of all Zone Lifeline Scores
+
+**Standard Score** = Zone Weighted Resource Score * (1 / Max Zone Weighted Resource Score)
+
+Once this Zone Resource score was established it then was standardized. Essentially it was converted to a 0 to 1 scale were the highest score was equal to 1, this new score is the Standard Score. The Standard Score could then be assigned to each census tract. The final Resource Score was then calculated by dividing the Standard Score by the population of the Census tract.
+
+**Resource Score** = Standard Score / Census Population
+
+This resource score is a proper representation of the resources available to every person in their respective census tract. It is used in the overall risk calculation as the Resource variable.
+
+
+**Risk = Hazard (Vulnerability - Resource)**
+
+To evaluate the expression in between the parenthesis the CDC’s Social Vulnerability Index (SVI) was used in place of Vulnerability. The issue that arose here is that in the instance that the Resource score is larger than the Vulnerability score, the expression will result in a negative number. This does not make logical sense because a census tract should not have a negative risk score. <br>
+
+To resolve this issue the evaluation was set to have the limit of 0.01. Essentially if the census tract was well equipped with resources and had a low Vulnerability rating at most they could be assessed to have a 0.01 risk score. This eliminated the possibility of a negative risk score and also made the statement that each census tract is subject to some amount of risk.
+
+From here the Hazard score could be added to the equation to provide an overall Risk score of each census tract. 
   
   
   ## Comprehensive Risk Dashboard
