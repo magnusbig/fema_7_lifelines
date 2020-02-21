@@ -57,8 +57,23 @@ Publish an interactive dashboard for FEMA that will provide,
       3. Build dashboard to display distribution of  3 peices of information (risk of flooding , SVI , lifeline).
       
      
-  ##. Data collection and cleaning
+  ## Data collection and cleaning
   
+  Data Definition: 
+
+  |Variable Name|Type|Decription|
+|---|---|---|
+|geometry|	object|	Latitude and Longitude and box geo information|
+|latitude|	float|	Latitude info extracted from geometry data|
+|longitude|	float|	Longitude info extracted from geometry data|
+|distance|	float|	The distance from point of origin (km)|
+|elevation|	int|	The elevation from sea level (m)|
+|name|	object|	Business name|
+|types|	object|	Type of business|
+|vicinity|	object|	Business address|
+|lifeline_number|	Int|	Number assignment for lifeline (1-7)|
+|lifeline_category|	object|	Description of lifeline|
+
   
   
   
