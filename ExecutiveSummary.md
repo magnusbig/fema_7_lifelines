@@ -83,7 +83,8 @@ different census tracts for the Denver region. The score ranges from 0-10 with w
   
   
   ## Further Improvement Section
-  
+  1. The  hazard index was derived using elevation  of random locations in a census tract , This could further be refined
+  by taking other factors in to account like the rainfall and absorptive capacity of soil and flow capacity of rivers.
   
   
     
