@@ -77,7 +77,8 @@ Publish an interactive dashboard for FEMA that will provide,
 |lifeline_number|	Int|	Number assignment for lifeline (1-7)|
 |lifeline_category|	object|	Description of lifeline|
 
-  
+  ##EDA 
+  ######  Community Life line frequency distribution and Elevations
   
   
   ## Modelling 
