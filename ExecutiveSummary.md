@@ -43,8 +43,11 @@ Risk  =  Hazard  x  (Vulnerability  -  Resources)
      
  ## Data collection and cleaning
   
-  Gather data from ....
-  
+For the initial data gathering, we utilized the Google Place Nearby API using Denver, Colorado (Latitude: 39.7392, Longitude:  -104.9902) as the point of origin with a 50,000 meter radius. Once the data was captured, we removed all information except for geometry, name, types, and vicinity and removed any duplicate data. Using the geometry data, we extracted the latitude and longitude data and calculated the distance from point of origin for each business. Also we utilized the latitude and longitude data for each business to gather the elevatin data using the Google Elevation API.
+
+As a group we assigned each type catagory to one of the seven lifelines. We then used this information to assign a lifeline number to each business based on its assigned type. A hierarchy logic was developed to prevent duplicates across multiple lifelines.
+
+The clean data was then saved for the next phase.
   
   Output File Data Definition: 
 
