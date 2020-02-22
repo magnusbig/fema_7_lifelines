@@ -30,8 +30,8 @@ Included in this repository:
   - Jupyter notebooks
     - census_to_zone.ipynb (assigns zones to each census tract, calculates final risk score)
     - define_zones.ipynb (creates zones based using DBSCAN)
-    - flood_zones.ipynb ()
-    - google_elevation_api.ipynb ()
+    - flood_zones.ipynb (calculates flood risk and assigns vulnerability score to tracts)
+    - google_elevation_api.ipynb (using Google Elevation API)
     - google_places_nearby_EDA.ipynb
     - lifeline_defined_lists.ipynb ()
     - lifeline_zone_assignment.ipynb ()
