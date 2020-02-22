@@ -121,8 +121,33 @@ To resolve this issue the evaluation was set to have the limit of 0.01. Essentia
 
 From here the Hazard score could be added to the equation to provide an overall Risk score of each census tract. 
   
+ **Vulnerability Score**
+
+We used the CDC's [Social Vulnerability Index](https://svi.cdc.gov/factsheet.html) percentile ranking as our vulnerability score. This score is calculated for each census tract and takes into account socioeconomic, household composition, Race/Ethnicity/Languages and Transportation for a given area to assess their vulnerability in the event of a disaster. The percentile ranking ranks each census tract in the US from 0% to 100% (most vulnerable).  
+
+<img src="https://github.com/magnusbig/fema_7_lifelines/blob/master/images/den_vulnerability.png" style="width: 100px">
+
+**Flood Hazard Score**
+
+*Step 1 Gather Elevation*: We first took 20 random points within each census tract and called the Google Maps Elevation API to get the elevation at various points within each tract. We then assigned each tract the minimum elevation value from that set. We chose minimum because in looking at floods we care most about low points.
+
+*Step 2 Find Elevation Difference to Nearby Tracts*: We found all the tracts within a 3km radius of the centroid of each tract and compared the minimum of the tract to the minimum elevation of the nearby tracts. By doing this we were able to find which tracts included the lowest point in the surrounding area, the premise being that flood risk is higher if one is at the lowest surrounding point such that water will flow there. One flaw that immediately became apparent here is, as one moves out of densely populated areas the tracts are large enough that our 3km radius does not capture any other tracts so all those area appear to be a local low point. We were unable to figure out a solution for this during the current timeline but are happy with the performance of our method within dense, urban areas.
+
+*Step 3 Scale Elevation Differences and Calculate Score*: Our final step consisted of first scaling our elevation differences to a 0-1 scale and then converting those values to a hazard score from 1-10. We scaled the data because we tried various standardization methods and found that our elevation data wasn't accurate enough to provide a perfect mapping of flood risk but the scaled version gave us a pretty close representation of FEMA's flood zone map for Denver, at least downtown. The 1-10 scale for hazard was chosen because it is easily understandable. Below you can see the comparison of our flood hazard rating with the FEMA map for Denver. You'll note that while metric is far from perfect it does capture the main flood zone through Denver quite well, which made us feel that this is at the least a good starting point for taking about flood hazard.
+
+<img src="https://github.com/magnusbig/fema_7_lifelines/blob/master/images/den_flood_risk.png" style="width: 100px">
+<img src="https://github.com/magnusbig/fema_7_lifelines/blob/master/images/zfema_flood_hazard.png" style="width: 100px">
+
+**Risk = Hazard (Vulnerability - Resource)**
+
+To evaluate the expression in between the parenthesis the CDC’s Social Vulnerability Index (SVI) was used in place of Vulnerability. The issue that arose here is that in the instance that the Resource score is larger than the Vulnerability score, the expression will result in a negative number. This does not make logical sense because a census tract should not have a negative risk score. <br>
+
+To resolve this issue the evaluation was set to have the limit of 0.01. Essentially if the census tract was well equipped with resources and had a low Vulnerability rating at most they could be assessed to have a 0.01 risk score. This eliminated the possibility of a negative risk score and also made the statement that each census tract is subject to some amount of risk.
+
+From here the Hazard score could be added to the equation to provide an overall Risk score of each census tract. 
   
-  ## Comprehensive Risk Dashboard
+  
+ ## Comprehensive Risk Dashboard
   
   Following interactive dashboard built in Tableau to visualize the individual components of equation which was used as heuristic to calculate the 'comprehensive risk' score, The bottom dashboard gives a visual indication of risk associated with
 different census tracts for the Denver region. The score ranges from 0-10 with with 0 being the lowest risk to 10 being the hiest risk.
@@ -133,7 +158,6 @@ different census tracts for the Denver region. The score ranges from 0-10 with w
   ## Further Improvement Section
   1. The 'hazard index' was derived using elevation of randomly selected locations in a census tract , This could further be refined by taking other factors in to account like the rainfall and absorptive capacity of soil , flow capacity of rivers
 urban drainage basin quality.
-  
-  
-    
-  
+  2. Much of the code utilizes GeoPandas which is not particularly fast, in order to be used in more geographies and provide a quick view of risk the code needs to be optimized.
+  3. Using API's to collect data from the CDC directly instead of downloading the data.
+  4. Consider more directly which lifelines might be affected in the event of a flood and how that effects a communities capability to respond.
