@@ -136,7 +136,7 @@ We used the CDC's [Social Vulnerability Index](https://svi.cdc.gov/factsheet.htm
 *Step 3 Scale Elevation Differences and Calculate Score*: Our final step consisted of first scaling our elevation differences to a 0-1 scale and then converting those values to a hazard score from 1-10. We scaled the data because we tried various standardization methods and found that our elevation data wasn't accurate enough to provide a perfect mapping of flood risk but the scaled version gave us a pretty close representation of FEMA's flood zone map for Denver, at least downtown. The 1-10 scale for hazard was chosen because it is easily understandable. Below you can see the comparison of our flood hazard rating with the FEMA map for Denver. You'll note that while metric is far from perfect it does capture the main flood zone through Denver quite well, which made us feel that this is at the least a good starting point for taking about flood hazard.
 
 <img src="https://github.com/magnusbig/fema_7_lifelines/blob/master/images/den_flood_risk.png" style="width: 100px">
-<img src="https://github.com/magnusbig/fema_7_lifelines/blob/master/images/zfema_flood_hazard.png" style="width: 100px">
+<img src="https://github.com/magnusbig/fema_7_lifelines/blob/master/images/fema_flood_hazard.png" style="width: 100px">
 
 **Risk = Hazard (Vulnerability - Resource)**
 
