@@ -10,7 +10,7 @@ Analysis of flooding risk and comprehensive risk of Census tracts in the Denver 
 
 ### Problem Statements/ Objectives: 
 
-**Problem Statement:** Prior to and during a disaster, it is important to understand the projected and actual effects of the event on the community, including its economic effects on critical services. FEMA has identified seven “lifelines” that require attention during a disaster: (1) safety and security; (2) Food, water, sheltering; (3) Health and medical; (4) Energy (power, fuel); (5) Communications; (6) Transportation; (7) hazardous waste. 
+**Problem Statement:** Prior to and during a disaster, it is important to understand the projected and actual effects of the event on the community, including its economic effects on critical services. FEMA has identified seven “lifelines” that require attention during a disaster: (1) safety and security; (2) Food, water, sheltering; (3) Health and medical; (4) Energy (power, fuel); (5) Communications; (6) Transportation; (7) hazardous waste. Using these lifeline designations, determine the risk to to a community based on a natural disater and their available lifeline resources. 
 
 **Objective 1:** Collect business profiles from the Google Places API
 
@@ -31,11 +31,11 @@ Included in this repository:
     - census_to_zone.ipynb (assigns zones to each census tract, calculates final risk score)
     - define_zones.ipynb (creates zones based using DBSCAN)
     - flood_zones.ipynb (calculates flood risk and assigns vulnerability score to tracts)
-    - google_elevation_api.ipynb (using Google Elevation API)
-    - google_places_nearby_EDA.ipynb
-    - lifeline_defined_lists.ipynb ()
-    - lifeline_zone_assignment.ipynb ()
-    - scoring_zones.ipynb ()
+    - google_elevation_api.ipynb (collect elevation data using Google Elevation API)
+    - google_places_nearby_EDA.ipynb (collect business profiles using Google places API)
+    - lifeline_defined_lists.ipynb (FEMA lifelines defined)
+    - lifeline_zone_assignment.ipynb (FEMA lifelines mapped to zones)
+    - scoring_zones.ipynb (zone scores calculated)
 - data folder (contains all datasets in csv,shp,json formats)
 - images folder (contains visualizations of modeleling process)
 - presentation slides (pdf format) for Light Technologies stakeholders
